@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d71ede7e-ec7f-4ac6-b725-6460cdbe8536/deploy-status)](https://app.netlify.com/sites/my-fitness-tracker/deploys)
+
 # FitnessTracker
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
