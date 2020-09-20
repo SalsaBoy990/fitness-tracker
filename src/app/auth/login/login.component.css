@@ -1,0 +1,40 @@
+mat-form-field {
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 12px;
+}
+
+.warn {
+  background: rgb(255, 255, 218);
+  color: rgb(175, 59, 59);
+  padding: 8px 4px;
+}
+
+.icon-displaced {
+  position: relative;
+  top: 4px;
+}
+
+.icon-displaced-email {
+  position: relative;
+  top: 5px;
+  margin-right: 4px;
+}
+
+.login-form-bg {
+  background: rgba(248, 248, 248, 0.88);
+  padding: 20px 0;
+}
+
+.login-bg {
+  height: 640px;
+  background: url("src/assets/images/fitness-login-bg.jpg") no-repeat bottom center fixed;
+  background-position: 37% 0%;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}

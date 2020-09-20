@@ -1,0 +1,54 @@
+<div class="signup-bg">
+
+<section class="signup-form signup-form-bg">
+  <h1 class="mat-h1"
+  style="text-align: center; padding-top: 12px;"
+  >Sign Up</h1>
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field>
+      <mat-label>Your Email</mat-label>
+      <input matInput type="email" ngModel name="email" email required #emInput="ngModel">
+      <mat-error *ngIf="emInput.hasError('required')">Field must not be empty</mat-error>
+      <mat-error *ngIf="emInput.hasError('email')">Email is invalid</mat-error>
+    </mat-form-field>
+    <mat-form-field hintLabel="Should be at least 6 characters long">
+      <mat-label>Your Password</mat-label>
+      <input matInput type="password" ngModel name="password" minlength="6" required #pwInput="ngModel">
+      <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
+      <mat-error *ngIf="pwInput.hasError('required')">Field must not be empty</mat-error>
+      <mat-error *ngIf="pwInput.value?.length > 1 && pwInput.value?.length < 6">Has to be at least 6 characters
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        placeholder="Your Birthdate"
+        [max]="maxDate"
+        ngModel
+        name="birthdate"
+        required
+        >
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+      <mat-checkbox labelPosition="after" ngModel name="agree" required>Agree to Terms and Conditions.</mat-checkbox>
+
+    <button *ngIf="!isLoaded" type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Submit</button>
+
+    <mat-spinner *ngIf="isLoaded"></mat-spinner>
+  </form>
+</section>
+</div>
+
+<!-- <section id="container">
+  <div id="child1" class="child"></div>
+  <div id="child2" class="child"></div>
+  <div id="child3" class="child"></div>
+</section> -->

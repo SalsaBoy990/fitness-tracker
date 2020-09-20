@@ -1,0 +1,50 @@
+mat-form-field {
+  width: 300px;
+}
+
+.signup-form-bg {
+  background: rgba(255, 254, 246, 0.86);
+  padding: 20px 0;
+}
+
+
+.signup-bg {
+  height: 640px;
+  background: url("src/assets/images/fitness-signup-bg.jpg") no-repeat bottom center fixed;
+  background-position: 50% 80%;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+
+
+
+
+
+#container {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  border: 1px solid black;
+  flex-direction: row;
+  /* justify-content: center; */
+  justify-content: flex-start;
+  align-items: center;
+}
+.child {
+  width: 200px;
+  height: 200px;
+  /* flex: 1; */
+}
+
+#child1 {
+  background-color: red;
+  /* flex: 2; */
+}
+#child2 {
+  background-color: green;
+}
+#child3 {
+  background-color: blue;
+}

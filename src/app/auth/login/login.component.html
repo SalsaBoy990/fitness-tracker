@@ -1,0 +1,83 @@
+<section class="login-bg">
+
+<!-- <form
+  class="login-form-bg"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  #f="ngForm"
+  (ngSubmit)="onLoginSubmit(f)">
+<h1 class="mat-h1">Login</h1>
+<mat-form-field>
+  <input
+    matInput
+    type="email"
+    ngModel
+    placeholder="Your email"
+    name="email"
+    email
+    required
+    #emailInput="ngModel"
+    >
+    <mat-error *ngIf="emailInput.hasError('required')">Email must not be empty.</mat-error>
+    <mat-error *ngIf="emailInput.hasError('email')">Email is invalid. Check it.</mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input
+    matInput
+    type="password"
+    ngModel
+    placeholder="Your password"
+    name="password"
+    required
+    #passInput="ngModel"
+    >
+    <mat-error *ngIf="emailInput.hasError('required')">Password must not be empty.</mat-error>
+</mat-form-field>
+
+<button type="submit" mat-raised-button color="accent" [disabled]="f.invalid">Login</button>
+
+<p *ngIf="loginFailed" class="mat-body-strong warn">
+  <mat-icon class="icon-displaced" color="warn">error</mat-icon>
+  Wrong password / email supplied. Try again!</p>
+
+</form> -->
+<form
+  class="login-form-bg"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="10px"
+  [formGroup]="loginForm"
+  (ngSubmit)="onLoginSubmit()"
+  >
+<h1 class="mat-h1">Login</h1>
+<mat-form-field>
+  <input
+    matInput
+    type="email"
+    placeholder="Your email"
+    formControlName="email"
+    >
+    <mat-icon matPrefix color="primary" class="icon-displaced-email">email</mat-icon>
+    <mat-hint>Please enter your email.</mat-hint>
+    <mat-error>Invalid or missing email.</mat-error>
+
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input
+    matInput
+    type="password"
+    placeholder="Your password"
+    formControlName="password"
+    >
+    <mat-icon matPrefix color="primary" class="icon-displaced-email">vpn_key</mat-icon>
+    <mat-hint>Please enter your password.</mat-hint>
+    <mat-error>Missing password.</mat-error>
+</mat-form-field>
+
+<button *ngIf="!isLoading" type="submit" mat-raised-button color="accent" [disabled]="loginForm.invalid">Login</button>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+</form>
+
+</section>

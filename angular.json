@@ -85,7 +85,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/sound"
             ],
             "styles": [
               "src/styles.css"
@@ -117,8 +118,13 @@
               "devServerTarget": "fitness-tracker:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "fitness-tracker"
 }
