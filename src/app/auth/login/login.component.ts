@@ -12,9 +12,6 @@ import { Subscription } from 'rxjs';
 export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
 
-  private email: string;
-  private password: string;
-
   isLoading: boolean = false;
   private loadingSubscription: Subscription;
 
